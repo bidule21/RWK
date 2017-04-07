@@ -49,5 +49,140 @@ namespace RWKEngine.Properties {
                 return ((string)(this["webPass"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ergebnis.xml")]
+        public string ErgDB {
+            get {
+                return ((string)(this["ErgDB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ergebnisse")]
+        public string ErgDBLvL1 {
+            get {
+                return ((string)(this["ErgDBLvL1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ergebniss")]
+        public string ErgDBLvL2 {
+            get {
+                return ((string)(this["ErgDBLvL2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SNr")]
+        public string ErgDBLvL21 {
+            get {
+                return ((string)(this["ErgDBLvL21"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dat")]
+        public string ErgDBLvL22 {
+            get {
+                return ((string)(this["ErgDBLvL22"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("E30")]
+        public string ErgDBLvL23 {
+            get {
+                return ((string)(this["ErgDBLvL23"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("E15")]
+        public string ErgDBLvL24 {
+            get {
+                return ((string)(this["ErgDBLvL24"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FHG")]
+        public string ErgDBLvL25 {
+            get {
+                return ((string)(this["ErgDBLvL25"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FHP")]
+        public string ErgDBLvL26 {
+            get {
+                return ((string)(this["ErgDBLvL26"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Schuetze.xml")]
+        public string SNDB {
+            get {
+                return ((string)(this["SNDB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Schuetzen")]
+        public string SNDBLvL1 {
+            get {
+                return ((string)(this["SNDBLvL1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Schuetze")]
+        public string SNDBLvL2 {
+            get {
+                return ((string)(this["SNDBLvL2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SN")]
+        public string SNDBLvL21 {
+            get {
+                return ((string)(this["SNDBLvL21"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("NN")]
+        public string SNDBLvL22 {
+            get {
+                return ((string)(this["SNDBLvL22"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("VN")]
+        public string SNDBLvL23 {
+            get {
+                return ((string)(this["SNDBLvL23"]));
+            }
+        }
     }
 }

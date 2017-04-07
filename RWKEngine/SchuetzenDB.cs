@@ -11,14 +11,14 @@ namespace SchützenVerwaltung
 {
     public class SchuetzenDB
     {
-        private string filepath = Application.StartupPath + "Schuetzen.xml";
+        private string filepath = Application.StartupPath + RWKEngine.Properties.Settings.Default.SNDB;
 
         public void createXml()
         {
             XmlTextWriter xtw;
             xtw = new XmlTextWriter(filepath, Encoding.UTF8);
             xtw.WriteStartDocument();
-            xtw.WriteStartElement("Schuetzen");
+            xtw.WriteStartElement(RWKEngine.Properties.Settings.Default.SNDBLvL1);
             xtw.WriteEndElement();
             xtw.Close(); 
         }
@@ -29,10 +29,10 @@ namespace SchützenVerwaltung
             XmlDocument xd = new XmlDocument();
             FileStream lfile = new FileStream(filepath, FileMode.Open);
             xd.Load(lfile);
-            XmlElement cl = xd.CreateElement("Schuetze");
-            cl.SetAttribute("Nname", s.Nname);
-            cl.SetAttribute("Vname", s.Vname);
-            cl.SetAttribute("SchNr", s.SchNr);
+            XmlElement cl = xd.CreateElement(RWKEngine.Properties.Settings.Default.SNDBLvL2);
+            cl.SetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL22, s.Nname);
+            cl.SetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL23, s.Vname);
+            cl.SetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL21, s.SchNr);
             xd.DocumentElement.AppendChild(cl);
             lfile.Close();
             xd.Save(filepath);
@@ -44,26 +44,26 @@ namespace SchützenVerwaltung
             XmlDocument xdoc = new XmlDocument();
             FileStream rfile = new FileStream(filepath, FileMode.Open);
             xdoc.Load(rfile);
-            XmlNodeList list = xdoc.GetElementsByTagName("Schuetze");
+            XmlNodeList list = xdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2);
             for (int i = 0; i < list.Count; i++)
             {
-                XmlElement cl = (XmlElement)xdoc.GetElementsByTagName("Schuetze")[i];
-                erg.Add(new Schuetze(cl.GetAttribute("Nname"), cl.GetAttribute("Vname"), cl.GetAttribute("SchNr")));
+                XmlElement cl = (XmlElement)xdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2)[i];
+                erg.Add(new Schuetze(cl.GetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL22), cl.GetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL23), cl.GetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL21)));
             }
             rfile.Close();
             return erg;
         }
 
-        public void UpdateXml(string key, string Value, string newValue)
+        public void UpdateXml(string key, string SNr, string newValue)
         {
             XmlDocument xdoc = new XmlDocument();
             FileStream up = new FileStream(filepath, FileMode.Open);
             xdoc.Load(up);
-            XmlNodeList list = xdoc.GetElementsByTagName("Schuetze");
+            XmlNodeList list = xdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2);
             for (int i = 0; i < list.Count; i++)
             {
-                XmlElement cu = (XmlElement)xdoc.GetElementsByTagName("Schuetze")[i];
-                if (cu.GetAttribute(key) == Value)
+                XmlElement cu = (XmlElement)xdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2)[i];
+                if (cu.GetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL21) == SNr)
                 {
                     cu.SetAttribute(key, newValue);
                 }
@@ -77,11 +77,11 @@ namespace SchützenVerwaltung
             FileStream rfile = new FileStream(filepath, FileMode.Open);
             XmlDocument tdoc = new XmlDocument();
             tdoc.Load(rfile);
-            XmlNodeList list = tdoc.GetElementsByTagName("Schuetze");
+            XmlNodeList list = tdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2);
             for (int i = 0; i < list.Count; i++)
             {
-                XmlElement cl = (XmlElement)tdoc.GetElementsByTagName("Schuetze")[i];
-                if (cl.GetAttribute("SchNr") == SNR)
+                XmlElement cl = (XmlElement)tdoc.GetElementsByTagName(RWKEngine.Properties.Settings.Default.SNDBLvL2)[i];
+                if (cl.GetAttribute(RWKEngine.Properties.Settings.Default.SNDBLvL21) == SNR)
                 {
                     tdoc.DocumentElement.RemoveChild(cl);
                 }

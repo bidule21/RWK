@@ -11,5 +11,50 @@
     <Setting Name="webPass" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Julia2013!</Value>
     </Setting>
+    <Setting Name="ErgDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ergebnis.xml</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ergebnisse</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ergebniss</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL21" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SNr</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL22" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Dat</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL23" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">E30</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL24" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">E15</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL25" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FHG</Value>
+    </Setting>
+    <Setting Name="ErgDBLvL26" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FHP</Value>
+    </Setting>
+    <Setting Name="SNDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Schuetze.xml</Value>
+    </Setting>
+    <Setting Name="SNDBLvL1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Schuetzen</Value>
+    </Setting>
+    <Setting Name="SNDBLvL2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Schuetze</Value>
+    </Setting>
+    <Setting Name="SNDBLvL21" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SN</Value>
+    </Setting>
+    <Setting Name="SNDBLvL22" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NN</Value>
+    </Setting>
+    <Setting Name="SNDBLvL23" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">VN</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
