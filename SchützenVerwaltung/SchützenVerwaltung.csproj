@@ -86,10 +86,6 @@
     <AssemblyOriginatorKeyFile>SchützenVerwaltung_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.DataVisualization" />
@@ -116,22 +112,17 @@
     <Compile Include="Eingabe.Designer.cs">
       <DependentUpon>Eingabe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ergebniss.cs" />
-    <Compile Include="ErgebnissDB.cs" />
     <Compile Include="ErgebnisseAnzeigen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ErgebnisseAnzeigen.Designer.cs">
       <DependentUpon>ErgebnisseAnzeigen.cs</DependentUpon>
     </Compile>
-    <Compile Include="helper.cs" />
     <Compile Include="RWKTrainingDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RWKTrainingDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Schuetze.cs" />
-    <Compile Include="SchuetzenDB.cs" />
     <Compile Include="SchuetzenVerwaltung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +240,12 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RWKEngine\RWKEngine.csproj">
+      <Project>{67b93577-9500-485f-9904-cc38e816b1d0}</Project>
+      <Name>RWKEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
