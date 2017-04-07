@@ -12,9 +12,9 @@ namespace SchützenVerwaltung
 {
     public class helper
     {
-        static private string _remoteHost = "ftp://winemp83.bplaced.net/rwk/";
-        static private string _remoteUser = "winemp83";
-        static private string _remotePass = "Julia2013!";
+        static private string _remoteHost = RWKEngine.Properties.Settings.Default.webFtp;
+        static private string _remoteUser = RWKEngine.Properties.Settings.Default.webUser;
+        static private string _remotePass = RWKEngine.Properties.Settings.Default.webPass;
 
         public static void FTPUploadFile(string source, string destination)
         {
