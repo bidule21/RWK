@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SchützenVerwaltung
 {
     public class Ergebniss
     {
+        #region Private Members
         private string _SchNr;
         private string _Datum;
         private string _Erg30;
         private string _Erg15;
         private string _FHG10;
         private string _FHP10;
-
+        #endregion
+        #region Public Members
         public string SchNr
         {
             get { return _SchNr; }
@@ -45,7 +42,8 @@ namespace SchützenVerwaltung
             get { return _FHP10; }
             set { this._FHP10 = value; }
         }
-
+        #endregion
+        #region Constructor
         public Ergebniss(string SN = "000000", string DA = "00.00.0000", string E30 = "0", string E15 = "0", string FHG = "0", string FHP ="0")
         {
             this._SchNr = SN;
@@ -55,5 +53,6 @@ namespace SchützenVerwaltung
             this._FHG10 = FHG;
             this._FHP10 = FHP;
         }
+        #endregion
     }
 }

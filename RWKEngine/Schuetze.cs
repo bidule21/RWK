@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SchützenVerwaltung
 {
     public class Schuetze
     {
+        #region Private Members
         private string _nname;
         private string _vname;
         private string _schnr;
-
+        #endregion
+        #region Public Members
         public string Nname
         {
             get{return this._nname;}
@@ -27,12 +24,14 @@ namespace SchützenVerwaltung
             get { return this._schnr; }
             set { this._schnr = value; }
         }
-
+        #endregion
+        #region Constructor
         public Schuetze(string NN = "none", string VN = "none", string SN = "000000")
         {
             this._nname = NN;
             this._vname = VN;
             this._schnr = SN;
         }
+        #endregion
     }
 }

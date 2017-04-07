@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SchützenVerwaltung
 {
     public class helper
     {
+        #region Private Static Members
         static private string _remoteHost = RWKEngine.Properties.Settings.Default.webFtp;
         static private string _remoteUser = RWKEngine.Properties.Settings.Default.webUser;
         static private string _remotePass = RWKEngine.Properties.Settings.Default.webPass;
-
+        #endregion
+        #region Public Static FTP Methods
         public static void FTPUploadFile(string source, string destination)
         {
             string filename = Path.GetFileName(source);
@@ -113,7 +110,8 @@ namespace SchützenVerwaltung
             response.Close();
 
         }
-
+        #endregion
+        #region Public File Methods
         public static bool CheckFile(string fileName)
         {
             return File.Exists(fileName) ? true : false;
@@ -123,6 +121,6 @@ namespace SchützenVerwaltung
         {
             File.Delete(fileName);
         }
-
+        #endregion
     }
 }

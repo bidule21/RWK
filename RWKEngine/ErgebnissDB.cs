@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -11,8 +8,11 @@ namespace SchützenVerwaltung
 {
     public class ErgebnissDB
     {
+        #region Private Member
         private string filepath = Application.StartupPath + RWKEngine.Properties.Settings.Default.ErgDB;
-
+        #endregion
+        #region Public Methods
+        
         public void createXml()
         {
             XmlTextWriter xtw;
@@ -74,5 +74,6 @@ namespace SchützenVerwaltung
             rfile.Close();
             tdoc.Save(filepath);
         }
+        #endregion
     }
 }
